@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:e_commerce_app/home_screen.dart';
+import 'package:e_commerce_app/bottom_nav_bar.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -72,7 +74,13 @@ class LoginScreen extends StatelessWidget {
                     minimumSize: Size(280, 50),
                   ),
                   onPressed: ()
-                  {},
+                  {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context){
+                          return MyApp();
+                        }
+                    ));
+                  },
                 ),
 
                 SizedBox(
