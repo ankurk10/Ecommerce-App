@@ -10,6 +10,9 @@ class WelcomePage extends StatelessWidget {
       body: Stack(
         alignment: Alignment.bottomCenter,
         children: <Widget>[
+
+
+
           Image(
               image: new AssetImage('assets/images/headphone.png'),
               fit: BoxFit.cover,
@@ -17,13 +20,48 @@ class WelcomePage extends StatelessWidget {
               width: double.infinity,
               alignment: Alignment.center
           ),
+
+
+          Padding(
+            padding: const EdgeInsets.only(top: 380),
+            child: Column(
+              children: [
+                Text("Listen All Day",
+                  style: TextStyle(
+                    fontSize: 35,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+
+                SizedBox(
+                  height: 15,
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.all(12),
+                  child: Text("Enjoy your playlist without interruption, because a full charge lasts up to 22 hours - or up to 40 hours with Pure ANC off.",
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.grey,
+                      fontWeight: FontWeight.normal,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+
+
+
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
             child: ButtonTheme(
               height: 40,
               minWidth: 40,
               child: ElevatedButton(
-                child: const Text("CONTINUE",
+                child: const Text("Login",
                   style: TextStyle(
                       color: Colors.white
                   ),
@@ -45,6 +83,8 @@ class WelcomePage extends StatelessWidget {
             ),
           ),
 
+
+
           Padding(
             padding: EdgeInsets.all(120),
             child: ButtonTheme(
@@ -59,7 +99,7 @@ class WelcomePage extends StatelessWidget {
                     ));
 
                   },
-                  child: const Text('Click Me',
+                  child: const Text('Sign Up',
                     style: TextStyle(color: Color(0xff7C6BD7)),
                   ),
                   style: OutlinedButton.styleFrom(
