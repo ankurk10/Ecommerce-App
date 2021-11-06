@@ -42,7 +42,7 @@ class OfferScreen extends StatelessWidget {
 
 
               Padding(
-                padding: const EdgeInsets.only(top:15, bottom: 1),
+                padding: const EdgeInsets.only(top:40, bottom: 1),
                 child: Container(
                   height: 180,
                   width: 340,
@@ -290,11 +290,62 @@ class OfferScreen extends StatelessWidget {
                 ),
               ),
 
+              SizedBox(
+                height: 20,
+              ),
 
+              Padding(
+                padding: const EdgeInsets.only(left: 200),
+                child: Column(
+                  children: [
+                    Text("Shipping : 4\$",
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+
+                    SizedBox(
+                      height: 10,
+                    ),
+
+                    Text("Total : 474\$",
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
+              SizedBox(
+                height: 20,
+              ),
+
+              ElevatedButton(
+                child: Text("Proceed to Checkout",
+                  style: TextStyle(
+                    fontSize: 18,
+                  ),),
+                style: TextButton.styleFrom(
+                  backgroundColor: Color(0xff7C6BD7),
+                  minimumSize: Size(340, 60),
+                ),
+                onPressed: ()
+                {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context){
+                        return OfferScreen();
+                      }
+                  ));
+                },
+              ),
 
             ],
           ),
         )
+
     );
   }
 }

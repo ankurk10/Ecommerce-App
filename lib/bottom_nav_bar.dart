@@ -47,28 +47,28 @@ class _MyHomePageState extends State<MyHomePage> {
         }),
         items: [
           BottomNavyBarItem(
-            icon: Icon(Icons.payments_outlined),
-            title: Text('Pay'),
-            activeColor: Colors.red,
+            icon: Icon(Icons.home_outlined),
+            title: Text('Home'),
+            activeColor: Color(0xff1595E2),
             textAlign: TextAlign.center,
           ),
           BottomNavyBarItem(
-            icon: Icon(Icons.paid_outlined),
-            title: Text('Rewards'),
+            icon: Icon(Icons.category_outlined),
+            title: Text('Product'),
             activeColor: Colors.purpleAccent,
             textAlign: TextAlign.center,
           ),
           BottomNavyBarItem(
-            icon: Icon(Icons.redeem),
+            icon: Icon(Icons.shopping_cart_outlined),
             title: Text(
-              'Benefits',
+              'Cart',
             ),
-            activeColor: Colors.red,
+            activeColor: Color(0xff7C6BD7),
             textAlign: TextAlign.center,
           ),
           BottomNavyBarItem(
-            icon: Icon(Icons.work_outlined),
-            title: Text('Career'),
+            icon: Icon(Icons.account_circle_outlined),
+            title: Text('Account'),
             activeColor: Colors.pink,
             textAlign: TextAlign.center,
           ),

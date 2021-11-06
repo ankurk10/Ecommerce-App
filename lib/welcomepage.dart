@@ -23,7 +23,7 @@ class WelcomePage extends StatelessWidget {
 
 
           Padding(
-            padding: const EdgeInsets.only(top: 380),
+            padding: const EdgeInsets.only(top: 500),
             child: Column(
               children: [
                 Text("Listen All Day",
@@ -35,7 +35,7 @@ class WelcomePage extends StatelessWidget {
                 ),
 
                 SizedBox(
-                  height: 15,
+                  height: 5,
                 ),
 
                 Padding(
@@ -54,61 +54,67 @@ class WelcomePage extends StatelessWidget {
 
 
 
-
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-            child: ButtonTheme(
-              height: 40,
-              minWidth: 40,
-              child: ElevatedButton(
-                child: const Text("Login",
-                  style: TextStyle(
-                      color: Colors.white
+          Row(
+            children: [
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+                child: ButtonTheme(
+                  height: 20,
+                  minWidth: 40,
+                  child: ElevatedButton(
+                    child: const Text("Login",
+                      style: TextStyle(
+                          color: Colors.white
+                      ),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xff7C6BD7),
+                      elevation: 20,
+                      fixedSize: const Size(120, 50),
+                    ),
+                    onPressed: ()
+                    {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context){
+                            return LoginScreen();
+                          }
+                      ));
+                    },
                   ),
                 ),
-                style: ElevatedButton.styleFrom(
-                  primary: Color(0xff7C6BD7),
-                  elevation: 20,
-                  fixedSize: const Size(120, 50),
-                ),
-                onPressed: ()
-                {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context){
-                        return LoginScreen();
-                      }
-                  ));
-                },
               ),
-            ),
+
+
+
+              Padding(
+                padding: EdgeInsets.all(30),
+                child: ButtonTheme(
+                    height: 40,
+                    minWidth: 40,
+                    child: OutlinedButton(
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context){
+                              return LoginScreen();
+                            }
+                        ));
+
+                      },
+                      child: const Text('Sign Up',
+                        style: TextStyle(color: Color(0xff7C6BD7)),
+                      ),
+                      style: OutlinedButton.styleFrom(
+                        side: BorderSide(width: 2, color: Color(0xff7C6BD7)),
+                        fixedSize: const Size(120, 50),
+                      ),
+                    )
+                ),
+              ),
+            ],
+
           ),
 
 
-
-          Padding(
-            padding: EdgeInsets.all(120),
-            child: ButtonTheme(
-                height: 40,
-                minWidth: 40,
-                child: OutlinedButton(
-                  onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context){
-                          return LoginScreen();
-                        }
-                    ));
-
-                  },
-                  child: const Text('Sign Up',
-                    style: TextStyle(color: Color(0xff7C6BD7)),
-                  ),
-                  style: OutlinedButton.styleFrom(
-                    side: BorderSide(width: 2, color: Color(0xff7C6BD7)),
-                    fixedSize: const Size(120, 50),
-                  ),
-                )
-            ),
-          ),
         ],
       ),
 
