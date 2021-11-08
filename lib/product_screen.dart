@@ -9,6 +9,7 @@ class ProductScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
+
               Padding(
                 padding: const EdgeInsets.only(top: 50, left: 10),
                 child: Row(
@@ -39,7 +40,62 @@ class ProductScreen extends StatelessWidget {
               ),
 
               SizedBox(
-                height: 350,
+                height: 20,
+              ),
+
+              Container(
+                child: Stack(
+                  children: [
+                    Opacity(opacity: 1,
+                      child: ClipPath(
+                        clipper: ClippingClass(),
+                        child: Container(
+                          color:Color(0xff7C6BD7),
+                          height: 310,
+                        ),
+                      ),
+                    ),
+
+                    Positioned(
+                      top: 30,
+                      left: 20,
+                      child: Text(
+                        "Beats by Solo",
+                        style: TextStyle(
+                          fontSize: 40,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+
+
+                    Positioned(
+                      top: 90,
+                      left:20,
+                      child: Text(
+                        "Dr. DRE",
+                        style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+
+                    Positioned(
+                      top: 110,
+                      left: 80,
+                      child: Image.asset("assets/images/big_headphone.png",
+                        scale: 1.3,
+                      ),
+                    ),
+
+                    Image.asset("assets/images/human.png",
+                      scale: 1.3,
+                    ),
+
+                  ],
+                ),
               ),
 
               Padding(
@@ -181,4 +237,22 @@ class ProductScreen extends StatelessWidget {
 
     );
   }
+}
+
+class ClippingClass extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    var path = Path();
+    path.lineTo(0.0, size.height-40);
+    path.quadraticBezierTo(size.width / 4, size.height,
+        size.width / 2, size.height);
+    path.quadraticBezierTo(size.width - (size.width / 4), size.height,
+        size.width, size.height - 40);
+    path.lineTo(size.width, 0.0);
+    path.close();
+    return path;
+  }
+
+  @override
+  bool shouldReclip(CustomClipper<Path> oldClipper) => false;
 }
