@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:e_commerce_app/login_screen.dart';
+import 'package:e_commerce_app/signup.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -10,8 +11,6 @@ class WelcomePage extends StatelessWidget {
       body: Stack(
         alignment: Alignment.bottomCenter,
         children: <Widget>[
-
-
 
           Image(
               image: new AssetImage('assets/images/headphone.png'),
@@ -95,7 +94,7 @@ class WelcomePage extends StatelessWidget {
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
                             builder: (context){
-                              return LoginScreen();
+                              return SignUp();
                             }
                         ));
 

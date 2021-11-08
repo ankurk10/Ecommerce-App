@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:e_commerce_app/home_screen.dart';
 import 'package:e_commerce_app/bottom_nav_bar.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class SignUp extends StatelessWidget {
+  const SignUp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +21,7 @@ class LoginScreen extends StatelessWidget {
 
 
           Padding(
-            padding: const EdgeInsets.only(top: 150),
+            padding: const EdgeInsets.only(top: 100),
             child: Column(
               children: [
                 Text("Enter Premium Sound",
@@ -37,9 +36,39 @@ class LoginScreen extends StatelessWidget {
                   height: 20,
                 ),
 
+                Text("SignUp",
+                  style: TextStyle(
+                    fontSize: 33,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+
+
 
                 Padding(
-                  padding: const EdgeInsets.only(left: 40, right: 40, top: 100),
+                  padding: const EdgeInsets.only(left: 40, right: 40, top: 60),
+                  child:  TextField(
+                    style:
+                    new TextStyle(fontSize: 18.0, color: Color(0xFFbdc6cf)),
+                    decoration: new InputDecoration(
+                      filled: true,
+                      fillColor: Colors.white,
+                      hintText: "Enter Your Full Name",
+                      labelText: "Name",
+                      labelStyle: TextStyle(
+                        color: Colors.grey,
+                      ),
+                      hintStyle: TextStyle(
+                        color: Colors.grey,
+                      ),
+
+                  ),
+                ),
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.only(left: 40, right: 40, top: 20),
                   child:  TextField(
                     style:
                     new TextStyle(fontSize: 18.0, color: Color(0xFFbdc6cf)),
@@ -85,9 +114,9 @@ class LoginScreen extends StatelessWidget {
           ),
 
           Positioned(
-            bottom: 180,
+            bottom: 140,
             child: ElevatedButton(
-              child: Text("Login",
+              child: Text("Signup",
                 style: TextStyle(
                   fontSize: 18,
                 ),),
@@ -107,19 +136,8 @@ class LoginScreen extends StatelessWidget {
           ),
 
           Positioned(
-            bottom: 150,
-            child: Text("Forgot Your Password?",
-              style: TextStyle(
-                fontSize: 14,
-                decoration: TextDecoration.underline,
-                color: Colors.white,
-              ),
-            ),
-          ),
-
-          Positioned(
-            bottom: 120,
-            child: Text("New Account",
+            bottom: 100,
+            child: Text("Already Have An Account?",
               style: TextStyle(
                 fontSize: 14,
                 decoration: TextDecoration.underline,
